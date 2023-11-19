@@ -1,12 +1,27 @@
 <script setup lang="ts">
+import { useIntersectionObserver } from '@vueuse/core'
+
+const props = defineProps<{
+    main_screen: HTMLDivElement | null
+}>()
 
 const open_side_bar = ref<boolean>(false)
+const targetIsVisible = ref<boolean>(false)
+
+const { stop } = useIntersectionObserver(
+    props.main_screen,
+    ([{ isIntersecting }], observerElement) => {
+        targetIsVisible.value = isIntersecting
+    }
+)
 
 </script>
 
 <template>
 <header class="fixed z-20">
-    <nav class="absolute text-white px-8 pt-3 z-10 flex items-center w-screen lg:px-44">
+    <nav class="absolute text-white px-8 pt-3 z-10 flex items-center w-screen lg:px-44 transition-all duration-150"
+        :class="targetIsVisible ? '' : 'bg-black bg-opacity-50 backdrop-blur-sm'"
+    >
         <nuxt-icon name="Main_icon" filled class="text-[40px] lg:text-[75px]" />
         <ul class="font-tech flex justify-end w-full invisible xl:visible">
             <ul class="list-disc flex space-x-14">
@@ -17,10 +32,10 @@ const open_side_bar = ref<boolean>(false)
                     <a href="#resume">RESUME</a>
                 </li>
                 <li class="text-3xl">
-                    <a href="#resume">IROLL</a>
+                    <a href="https://discord.gg/jX7gKu8xEg">IROLL</a>
                 </li>
                 <li class="text-3xl">
-                    <a href="#resume">CHECK MY PORTFOLIO</a>
+                    <a href="https://www.behance.net/matheuscarvalho121">CHECK MY PORTFOLIO</a>
                 </li>
             </ul>
         </ul>
