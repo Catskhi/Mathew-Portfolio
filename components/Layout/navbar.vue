@@ -6,21 +6,29 @@ const props = defineProps<{
 }>()
 
 const open_side_bar = ref<boolean>(false)
-const targetIsVisible = ref<boolean>(false)
+const targetIsVisible = ref<boolean>(true)
 
-const { stop } = useIntersectionObserver(
-    props.main_screen,
-    ([{ isIntersecting }], observerElement) => {
-        targetIsVisible.value = isIntersecting
-    }
-)
+const have_main_screen = computed(() => {
+    return props.main_screen !== null
+})
+
+watch(have_main_screen, () => {
+    const { stop } = useIntersectionObserver(
+        props.main_screen,
+        ([{ isIntersecting }], observerElement) => {
+            targetIsVisible.value = isIntersecting
+        }
+    )
+})
+
 
 </script>
 
 <template>
 <header class="fixed z-20">
-    <nav class="absolute text-white px-8 pt-3 z-10 flex items-center w-screen lg:px-44 transition-all duration-150"
-        :class="targetIsVisible ? '' : 'bg-black bg-opacity-50 backdrop-blur-sm'"
+    <nav 
+        class="absolute text-white px-8 pt-3 z-10 flex items-center w-screen lg:px-44 transition-all duration-150"
+        :class="[targetIsVisible ? '' : 'bg-black bg-opacity-50 backdrop-blur-sm']"
     >
         <nuxt-icon name="Main_icon" filled class="text-[40px] lg:text-[75px]" />
         <ul class="font-tech flex justify-end w-full invisible xl:visible">
