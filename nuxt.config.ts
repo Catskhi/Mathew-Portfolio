@@ -5,5 +5,6 @@ export default defineNuxtConfig({
     'nuxt-icons',
     'nuxt-icon',
     '@nuxt/ui',
+    '@vueuse/nuxt',
   ]
 })
