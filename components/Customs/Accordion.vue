@@ -54,7 +54,7 @@ const props = defineProps<{
 
 <style scoped>
 p {
-    @apply px-2 text-lg;
+    @apply px-2 text-base;
 }
 
 .link {
