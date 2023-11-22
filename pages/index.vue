@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 const resume_items = [
     {
         label: 'About me and my graduation',
@@ -17,7 +16,6 @@ const resume_items = [
 ]
 
 const main_screen = ref<HTMLDivElement | null>(null)
-
 </script>
 
 <template>
@@ -36,9 +34,11 @@ const main_screen = ref<HTMLDivElement | null>(null)
                 Simplicity is Elegance - Minimalist Design
                 <br> by Matheus Carvalho
             </p>
-            <button class="bg-[#E6E6E6] text-black font-inter mt-8 py-2 rounded text-left px-5 cursor-pointer hover:brightness-75 active:scale-[99%] transition-all duration-300 w-full">
+            <a class="bg-[#E6E6E6] text-black font-inter mt-8 py-2 rounded text-left px-5 cursor-pointer hover:brightness-75 active:scale-[99%] transition-all duration-300 w-full"
+                href="https://www.behance.net/matheuscarvalho121" target="_blank"
+            >
                 <span class="font-semibold">Portfolio</span>
-            </button>
+            </a>
         </div>
         <div class="flex items-center justify-end w-full invisible xl:visible">
             <img src="/profile_picture.png" class="w-[400px] profile_picture rounded-full" />
@@ -46,7 +46,7 @@ const main_screen = ref<HTMLDivElement | null>(null)
     </div>
     <div id="about" class="bg-[#010101] text-white pt-10 pb-20 xl:px-40">
         <h2 class="font-tech text-center text-3xl xl:text-5xl xl:pt-10">ABILITIES</h2>
-        <div class="flex px-10 mt-14 flex-col pt-12 xl:flex-row">
+        <div class="grid justify-center xl:grid-cols-3 mt-14">
             <CardsAbility title="Graphic Designer" description="Crafting Digital Experiences Creating seamless, user-centric websites for an intuitive online journey." />
             <CardsAbility title="Web Designer" description="Crafting Digital Experiences Creating seamless, user-centric websites for an intuitive online journey." />
             <CardsAbility title="Web Designer" description="Crafting Digital Experiences Creating seamless, user-centric websites for an intuitive online journey." />
@@ -55,10 +55,10 @@ const main_screen = ref<HTMLDivElement | null>(null)
     <div id="resume" class="bg-[#010101] text-white py-10 xl:px-40 pb-20">
         <h2 class="font-tech px-8 text-3xl pt-5 xl:text-5xl xl:pt-10 xl:mt-20">RESUME</h2>
         <div class="px-8 mt-5 lg:grid lg:grid-cols-2 lg:gap-x-5">
-            <div class="bg-red-500 w-full h-72 lg:h-96 lg:order-last">
+            <div class="bg-red-500 w-full lg:order-last h-72 lg:h-96">
 
             </div>
-            <div class="mt-5">
+            <div class="max-h-96 overflow-scroll">
                 <CustomsAccordion :resume_items="resume_items" />
             </div>
         </div>
