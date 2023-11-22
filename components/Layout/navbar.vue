@@ -26,10 +26,10 @@ const { x, y} = useWindowScroll()
                     <a href="#resume">RESUME</a>
                 </li>
                 <li class="text-3xl">
-                    <a href="https://discord.gg/jX7gKu8xEg">IROLL</a>
+                    <a target="_blank" href="https://discord.gg/jX7gKu8xEg">IROLL</a>
                 </li>
                 <li class="text-3xl">
-                    <a href="https://www.behance.net/matheuscarvalho121">CHECK MY PORTFOLIO</a>
+                    <a target="_blank" href="https://www.behance.net/matheuscarvalho121">CHECK MY PORTFOLIO</a>
                 </li>
             </ul>
         </ul>
