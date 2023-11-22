@@ -30,9 +30,9 @@ const props = defineProps<{
             <br><br>
             Phone: +55 31 98527-7094
             <br><br>
-            Email: <a href="mailto:matheusdesousacarvalho17@gmail.com" class="link">matheusdesousacarvalho17@gmail.com</a>
+            Email: <a href="mailto:matheusdesousacarvalho17@gmail.com" target="_blank" class="link">matheusdesousacarvalho17@gmail.com</a>
             <br><br>
-            Behance: <a href="https://www.behance.net/matheuscarvalho121" class="link">https://www.behance.net/matheuscarvalho121</a>
+            Behance: <a href="https://www.behance.net/matheuscarvalho121" target="_blank" class="link">https://www.behance.net/matheuscarvalho121</a>
         </p>
     </template>
     <template #default="{ item, index, open }">
