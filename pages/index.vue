@@ -49,7 +49,7 @@ const main_screen = ref<HTMLDivElement | null>(null)
         <div class="grid justify-center xl:grid-cols-3 mt-14 space-y-10 xl:space-y-0">
             <CardsAbility title="Graphic Designer" description="Crafting Digital Experiences Creating seamless, user-centric websites for an intuitive online journey." />
             <CardsAbility title="Web Designer" description="Crafting Digital Experiences Creating seamless, user-centric websites for an intuitive online journey." />
-            <CardsAbility title="Web Designer" description="Crafting Digital Experiences Creating seamless, user-centric websites for an intuitive online journey." />
+            <CardsAbility title="UI/UX" description="Sleek contemporary UI/UX interfaces, simple yet impactful visual elements that communicate effectively." />
         </div>
     </div>
     <div id="resume" class="bg-[#010101] text-white px-40 py-10 pb-20">
