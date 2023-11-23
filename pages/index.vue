@@ -25,7 +25,7 @@ const main_screen = ref<HTMLDivElement | null>(null)
     <div class="h-screen w-creen grey_gradient"></div>
     <div ref="main_screen" class="lg:px-40 absolute top-0 w-screen flex">
         <div class="min-1/2 h-screen text-white z-10 flex flex-col justify-center pl-8">
-            <p class="font-inter text-xl lg:text-2xl font-semibold">Simpler as f***</p>
+            <p class="font-inter text-xl lg:text-2xl font-semibold">Simple as Breathing</p>
             <h1 class="text-[50px] lg:text-[60px] font-extrabold">
                 MATHEUS
                 <span class="mt-5">CARVALHO</span>
