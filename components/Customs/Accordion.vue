@@ -38,7 +38,7 @@ const props = defineProps<{
     <template #default="{ item, index, open }">
         <UButton class="!bg-transparent !text-[#A8A8A8] border-b-[#555555] border-b py-3">
             <template #leading>
-                <span class="text-lg">{{ item.label }}</span>
+                <span class="text-base xl:text-lg">{{ item.label }}</span>
             </template>
             <template #trailing>
                 <Icon
@@ -53,8 +53,10 @@ const props = defineProps<{
 </template>
 
 <style scoped>
+
+
 p {
-    @apply px-2 text-base;
+    @apply px-2 text-sm xl:text-base;
 }
 
 .link {
