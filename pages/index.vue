@@ -45,14 +45,14 @@ const main_screen = ref<HTMLDivElement | null>(null)
         </div>
     </div>
     <div id="about" class="bg-[#010101] text-white pt-10 pb-20 xl:px-40">
-        <h2 class="font-tech text-center text-3xl xl:text-5xl xl:pt-10">ABILITIES</h2>
+        <h2 class="font-tech text-center text-3xl xl:text-5xl xl:py-20">ABILITIES</h2>
         <div class="grid justify-center xl:grid-cols-3 mt-14 space-y-10 xl:space-y-0">
             <CardsAbility title="Graphic Designer" description="Crafting Digital Experiences Creating seamless, user-centric websites for an intuitive online journey." />
             <CardsAbility title="Web Designer" description="Crafting Digital Experiences Creating seamless, user-centric websites for an intuitive online journey." />
             <CardsAbility title="UI/UX" description="Sleek contemporary UI/UX interfaces, simple yet impactful visual elements that communicate effectively." />
         </div>
     </div>
-    <div id="resume" class="bg-[#010101] text-white px-40 py-10 pb-20">
+    <div id="resume" class="bg-[#010101] text-white lg:px-40 py-10 pb-20">
         <h2 class="font-tech px-8 text-3xl pt-5 xl:text-5xl xl:pt-10 xl:mt-20">RESUME</h2>
         <div class="px-8 mt-5 xl:grid xl:grid-cols-2 xl:gap-x-5">
             <div class="bg-red-500 w-full lg:order-last h-72 lg:h-96">
